@@ -4,12 +4,7 @@
 
 
 @media screen and (max-width:430px){
-    .hero{
-        width: 100%;
-        background-color: var(--color-bg);
-
-    }
-    .hero-container{
+    .about-container{
         width: 90vw;
         margin: 20px;
         display: flex;

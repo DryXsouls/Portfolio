@@ -1,12 +1,14 @@
-
+@import "../Vars.css";
 .fa-times {
     font-size: 2rem;
-    color: white;
+    color: var(--color-primary);
 }
 .fa-bars{
-    color: white;
+    color: var(--color-primary);
     font-size: 2rem;
 }
+
+
 @media screen and (max-width: 430px) {
     .NavbarItems{
         position: relative;
@@ -16,7 +18,7 @@
         width: 100%;
         height: 4rem;
         display: flex;
-        background-color: rgba(25,25,25,50%);
+        background-color: var(--color-bg);
         align-items: center;
         justify-content: space-between;
         position: sticky;
@@ -25,22 +27,22 @@
         z-index: 999;
     }
     .navbar-container{
-          width: 100%;
+          width: 90vw;
           height: 3rem;
           display: flex;
-          gap: clamp(1rem,5vw,2rem);
+          gap: clamp(1rem,5vw,3rem);
           align-items: center;
           justify-content: space-between;
       }
 
     .navbar-logo{
         cursor: pointer;
-        color: black;
+        color: var(--color-title);
         text-decoration: none;
         white-space: nowrap;
     }
     .navbar-logo:hover{
-        color: #1e90ff;
+        color: var(--color-seconday);
         transition: all 0.2s ease-out;
 
     }
@@ -51,19 +53,19 @@
         justify-content: center;
         align-items: center;
         padding: 5px;
-        background-color: black;
+        background-color: var(--color-title);
         border-radius: 5px;
         cursor: pointer;
     }
     .menu-icon:hover{
-        background-color: #1e90ff;
+        background-color: var(--color-seconday);
         transition: all 0.2s ease-out;
     }
     .menu-icon.active{
-        background-color: #1e90ff;
+        background-color: var(--color-seconday);
     }
     .menu-icon.active:hover{
-        background-color: black;
+        background-color:  var(--color-title);
     }
 
     .nav-menu{
@@ -87,12 +89,20 @@
         transition: all 0.5s ease;
         z-index: 1;
     }
-
-    .nav-link{
+    .nav-item{
+        height: 3rem;
         width: 100%;
+    }
+    .nav-link{
+        height: 100%;
         text-decoration: none;
-        margin: 20px 0;
-        display: table;
-
+        padding: 0.25rem 1rem 0.3rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: var(--color-primary);
+    }
+    .nav-link:hover{
+        background-color: var(--color-seconday);
     }
 }

@@ -12,7 +12,10 @@ function Navbar(){
         setClick(!click);
         setIsActive(!isActive);
     }
-    const closeMobileMenu = () => setClick(false);
+    const closeMobileMenu = () =>{
+        setClick(false);
+        setIsActive(false);
+    }
 
     return(
         <>
@@ -31,12 +34,12 @@ function Navbar(){
                             About
                         </Link>
                     </li>
-                    <li>
+                    <li className='nav-item'>
                         <Link to='/portfolio' className='nav-link' onClick={closeMobileMenu}>
                             Portfolio
                         </Link>
                     </li>
-                    <li>
+                    <li className='nav-item'>
                         <Link to='/contact' className='nav-link' onClick={closeMobileMenu}>
                             Contact
                         </Link>
